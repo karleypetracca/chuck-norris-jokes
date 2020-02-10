@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Chuck Norris API</title>
+</head>
+<body>
+    <div class="wrapper">
+        <p id="welcome">Ole Man Chuck says...</p>
+        <form>
+            <input type="hidden" id="categoryInput" value="animal">
+            <label for="selectCategory">Choose a category:</label>
+            <select id="selectCategory" name="selectCategory">
+                <option value="dev">Dev</option>
+                <option value="animal">Animal</option>
+                <option value="career">Career</option>
+                <option value="celebrity">Celebrity</option>
+                <option value="fashion">Fashion</option>
+                <option value="food">Food</option>
+                <option value="history">History</option>
+                <option value="money">Money</option>
+                <option value="movie">Movie</option>
+                <option value="music">Music</option>
+                <option value="political">Political</option>
+                <option value="religion">Religion</option>
+                <option value="science">Science</option>
+                <option value="sport">Sport</option>
+                <option value="travel">Travel</option>
+            </select>
+            <button type="button" id="refresh">Refresh if you dare</button>
+        </form>
+        <p id="chuckSays"></p>
+        <footer>
+            <p>Sourced from the <a href="https://api.chucknorris.io/">Chuck Norris API</a></p>
+        </footer>
+    </div>
+</body>
+<script src="scripts/get.js"></script>
+<script src="scripts/script.js"></script>
+</html>

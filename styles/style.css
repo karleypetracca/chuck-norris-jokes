@@ -1,0 +1,58 @@
+html {
+    font-size: 24px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 20px auto;
+    background: url("../images/apocalypse-2273069_1280.jpg") no-repeat center center fixed;
+    background-size: cover;
+}
+
+.wrapper {
+    margin: 50px auto;
+    width: 800px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding-bottom: 5px;
+}
+
+#welcome {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    font-weight: bold;
+}
+
+form {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+#refresh, #selectCategory, label {
+    font-size: .7rem;
+    margin: 20px;
+    width: 200px;
+}
+
+#selectCategory {
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+#chuckSays {
+    margin: 20px;
+    padding-bottom: 50px;
+}
+
+footer {
+    margin: 20px auto;
+    padding: 20px auto;
+    font-size: .7rem;
+    text-align: center;
+}
