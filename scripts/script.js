@@ -5,7 +5,8 @@
 let category = 'animal';
 
 const refreshButton = document.querySelector("#refresh"),
-    selectCategory = document.querySelector("#selectCategory");
+    selectCategory = document.querySelector("#selectCategory"),
+    closeModalButton = document.querySelector("#closeModal");
 
 
 // function pulls categories from chuck norris api and appends to html/select
@@ -25,11 +26,16 @@ function buildCategories() {
     })
 }
 
-// function pulls quote from chuck norris api based on changeable variable
+// function pulls quote from chuck norris api based on changeable variable and
+// toggles modal window
 function getQuote(category) {
     const apiUrl = `https://api.chucknorris.io/jokes/random?category=${category}`;
     const chuckSaysParagraph = document.querySelector("#chuckSays");
-    get(apiUrl).then(response => chuckSaysParagraph.innerHTML = response.value);
+    const modalWindow = document.querySelector(".modal-overlay");
+    get(apiUrl).then(function(response) {
+        chuckSaysParagraph.innerHTML = response.value;
+        modalWindow.classList.toggle("open");
+    });
 }
 
 // event listener added to refresh button with quote pull action
@@ -48,6 +54,12 @@ selectCategory.addEventListener("click", function(event) {
     }
 })
 
+// close Modal
+closeModalButton.addEventListener("click", function(event) {
+    const modalWindow = document.querySelector(".modal-overlay");
+    modalWindow.classList.toggle("open");
+})
+
 // run key functions to start page
 buildCategories();
-getQuote(category);
+// getQuote(category);
