@@ -9,8 +9,7 @@
 </head>
 <body>
     <div class="wrapper">
-        <img src="images/man-161135_1280.png">
-        <p id="welcome">Ol' Man Chuck says...</p>
+        <p id="welcome"><img src="images/man-161135_1280.png">Lil' Chuck says...</p>
         <form>
             <input type="hidden" id="categoryInput">
             <label for="selectCategory">Choose a category:</label>
@@ -18,10 +17,15 @@
             </select>
             <button type="button" id="refresh">Refresh if you dare!</button>
         </form>
-        <p id="chuckSays"></p>
         <footer>
             <p>Sourced from the <a href="https://api.chucknorris.io/">Chuck Norris API</a></p>
         </footer>
+    </div>
+    <div class="modal-overlay">
+        <div class="modal-content">
+            <span id="closeModal" class="modal-close">X</span>
+            <p id="chuckSays"></p>
+        </div>
     </div>
 </body>
 <script src="scripts/get.js"></script>
