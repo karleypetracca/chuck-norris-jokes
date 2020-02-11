@@ -65,6 +65,16 @@ label {
 #refresh {
     margin-left: 30px;
     width: 170px;
+    background-color: rgb(177, 73, 25);
+    border-style: solid;
+    border-radius: 8px;
+    color: white;
+    height: 2rem;
+}
+
+#refresh:hover {
+    background-color: rgb(124, 60, 38);
+    cursor: pointer;
 }
 
 #chuckSays {
